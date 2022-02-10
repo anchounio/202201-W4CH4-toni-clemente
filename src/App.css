@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+/*FUENTES DE TEXTO IMPORTADAS*/
+
+/*Fondo de la página*/
+
+body {
+  background-color: #cccccc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Estilos generales para toda la página*/
+* {
+  margin: 10px;
+  padding: 0px;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#presupuestos {
+  width: 100%;
+  height: 1000px;
+  text-align: left;
+  margin-top: 20px;
+  /*background: linear-gradient(to right, rgb(1, 1, 31), rgb(93, 83, 185));*/
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#presupuestos .caja {
+  margin-left: 160px;
+}
+
+#presupuestos p {
   color: white;
+  margin-top: 50px;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+#presupuestos label {
+  color: white;
+  font-size: 20px;
+  font-family: arial, verdana;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Los estilos para el formulario*/
+
+input[type='text'],
+input[type='password'],
+input[type='date'],
+input[type='tel'],
+input[type='email'],
+input[type='submit'],
+input[type='reset'] {
+  border: 1px solid grey;
+  margin-top: 30px;
+  transition: all 100ms;
+  font-size: 20px;
+  font-family: arial, verdana;
+  color: black;
+  border-radius: 6px;
+  background: rgb(172, 189, 236);
+  font-weight: bold;
+}
+
+select,
+input[type='number'] {
+  border: 1px solid grey;
+  transition: all 100ms;
+  font-size: 20px;
+  font-family: arial, verdana;
+  color: black;
+  border-radius: 6px;
+  background: rgb(172, 189, 236);
+  font-weight: bold;
+}
+
+input[type='number'] {
+  width: 40px;
+}
+
+#pres {
+  cursor: default;
+}
+
+#apellidos,
+#email {
+  margin-left: 100px;
+}
+
+input[type='text']::placeholder,
+input[type='password']::placeholder,
+input[type='date']::placeholder,
+input[type='email']::placeholder,
+input[type='checkbox']::placeholder,
+input[type='submit']::placeholder,
+input[type='reset']::placeholder {
+  color: grey;
+}
+
+input[type='text']:hover,
+input[type='password']::placeholder,
+input[type='date']::placeholder,
+input[type='tel']:hover,
+input[type='email']:hover,
+input[type='checkbox']:hover,
+input[type='reset']:hover {
+  box-shadow: 0px 0px 7px grey inset; /*crea sombreado en los bordes interiores de cada caja */
+}
+
+/* Desactivo el sombreado al situar el ratón sobre la caja de presupuesto estimado  
+/ No quiero que la caja insinúe interacción alguna */
+#pres:hover {
+  box-shadow: none;
+}
+
+input[type='submit'],
+input[type='reset'] {
+  color: white;
+  background-color: rgb(19, 22, 165);
+  box-shadow: 1px 1px 7px rgb(4, 5, 39) inset;
+  font-size: 16px;
+  cursor: pointer;
+  height: 30px;
+  width: 170px;
+  border: 1px solid rgb(7, 9, 97);
+}
+
+input[type='submit']:hover,
+input[type='reset']:hover {
+  color: white;
+  background-color: #00aadb;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+}
+
+#text-descuento {
+  display: inline;
+  margin-left: 50px;
 }
